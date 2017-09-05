@@ -35,12 +35,12 @@ public class Puzzling{
     }
     // Create an array that contains all 26 letters of the alphabet (this array must have 26 values). Shuffle the array and display the last letter of the array. Have it also display the first letter of the array. If the first letter in the array is a vowel, have it display a message
     public static void alphaShuffle(){
-        char[] alphabet = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
+        String[] alphabet = {"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"};
         Collections.shuffle(Arrays.asList(alphabet));
-        char first = alphabet[0];
+        String first = alphabet[0];
         System.out.println("The last letter is: "+alphabet[25]);
         System.out.println("The first letter is: "+first);
-        if(first == 'a' || first == 'e' || first == 'i' || first == 'o' || first == 'u'){
+        if(first == "a" || first == "e" || first == "i" || first == "o" || first == "u"){
             System.out.println("The first letter is a vowel. Yay!");
         }
     }
