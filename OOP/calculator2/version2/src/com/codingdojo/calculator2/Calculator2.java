@@ -54,7 +54,9 @@ public class Calculator2  {
 	}
 	public void performOperation(String operator) {
 		if(operator == "=") {
-			if(this.operator1 == "+") {
+			if(!this.operator1Set) {
+				this.total = this.operand1;
+			} else if(this.operator1 == "+") {
 				this.total = this.operand1 + this.operand2;
 			} else {
 				this.total = this.operand1 - this.operand2;
