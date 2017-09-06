@@ -5,7 +5,7 @@ import java.util.Collections;
 
 public class Deck {
     ArrayList<Card> cards = new ArrayList<>();
-    
+
     public Deck(){
         String[] values = {"Ace","2","3","4","5","6","7","8","9","10","Jack","Queen","King"};
         for(String value : values){
