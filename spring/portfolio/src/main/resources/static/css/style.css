@@ -1,0 +1,36 @@
+* {
+	font-weight: inherit;
+	font-size: inherit;
+}
+.container {
+	font: 100 12pt "Helvetica Neue", sans-serif;
+	text-align: center;
+}
+a {
+	text-decoration: none;
+	color: grey;
+}
+h1 {
+	font-size: 45pt;
+}
+h2 {
+	font-size: 30pt;
+}
+h3 {
+	font-size: 16pt;
+}
+.content {
+	display: flex;
+	flexflow: row wrap;
+	justify-content: center;
+	margin: 10px auto 0 auto;
+	width: 80%;
+}
+fieldset {
+	border: 1px solid pink;
+	width: 40%;
+	flex: none flex-shrink 40%;
+}
+legend {
+	text-align: left;
+}
