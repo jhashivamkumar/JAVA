@@ -15,7 +15,7 @@
 			<thead>
 				<tr>
 					<th>Dojo Name</th>
-					<th>Dojo ID</th>
+					<th>Ninja Count</th>
 					<th>Date Created</th>
 				</tr>
 			</thead>
@@ -23,7 +23,7 @@
 			<c:forEach items="${dojos}" var="dojo">
 				<tr>
 					<td><a href="/dojos/${dojo.id}"><c:out value="${dojo.name}"/></a></td>
-					<td><c:out value="${dojo.id}"/></td>
+					<td><c:out value="${dojo.getNinjas().size()}"/> ninjas</td>
 					<td><c:out value="${dojo.created_at}"/></td>
 				</tr>
 			</c:forEach>
