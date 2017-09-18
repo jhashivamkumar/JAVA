@@ -35,12 +35,14 @@ public class Users {
     public String registration(@Valid @ModelAttribute("user") User user, BindingResult result, Model model) {
 
         userValidator.validate(user, result);
+        
 
         if (result.hasErrors()) {
             return "registrationPage.jsp";
         }
         
         userService.saveWithUserRole(user);
+        
         return "redirect:/login";
     }
     

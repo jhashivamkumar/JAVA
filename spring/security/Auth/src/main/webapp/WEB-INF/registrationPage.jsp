@@ -15,8 +15,16 @@
     
     <form:form method="POST" action="/registration" modelAttribute="user">
         <p>
-            <form:label path="username">Username:</form:label>
+            <form:label path="username">Email:</form:label>
             <form:input path="username"/>
+        </p>
+        <p>
+            <form:label path="first_name">First Name:</form:label>
+            <form:input path="first_name"/>
+        </p>
+        <p>
+            <form:label path="last_name">Last Name:</form:label>
+            <form:input path="last_name"/>
         </p>
         <p>
             <form:label path="password">Password:</form:label>
