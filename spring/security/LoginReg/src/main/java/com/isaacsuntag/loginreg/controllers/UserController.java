@@ -45,7 +45,7 @@ public class UserController {
 			return "loginReg.jsp";
 		}
 		session.setAttribute("created", "Account created. Please log in.");
-		userService.saveWithUserRole(user);
+		userService.saveUserWithAdminRole(user);
 		return "redirect:/login";
     }
 	
@@ -63,5 +63,11 @@ public class UserController {
         String email = principal.getName();
         model.addAttribute("currentUser", userService.findByEmail(email));
         return "home.jsp";
+    }
+	@RequestMapping("/admin")
+    public String adminPage(Principal principal, Model model) {
+        String email = principal.getName();
+        model.addAttribute("currentUser", userService.findByEmail(email));
+        return "adminPage.jsp";
     }
 }
